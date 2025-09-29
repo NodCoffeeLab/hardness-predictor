@@ -77,7 +77,7 @@ with col1:
         country = selected_country
 
     variety = st.selectbox("종 / Variety", ["", "Arabica", "Robusta", "Liberica"])
-    processing = st.selectbox("가공 / Processing", ["", "Water Process Decaffeination"])
+    processing = st.selectbox("가공 / Processing", ["", "Water Process Decaffeination", "Future feature / 추후 지원 예정"])
     cultivar = st.text_input("재배종 / Cultivar", placeholder="Future feature / 추후 지원 예정", disabled=True)
 
 with col2:
@@ -129,3 +129,4 @@ if st.button("Predict Hardness / 경도 예측하기", use_container_width=True,
             ko_label_prob = labels_ko[label_numeric]
             en_label_prob = labels_en[label_numeric]
             st.write(f"{ko_label_prob} / {en_label_prob}: **{prob:.1%}**")
+
